@@ -30,7 +30,11 @@ get your api key and access token
 paste into your .env
 
 # accessing .env for vite use:
-import.meta.env.YOUR_VARIABLE_NAME
+import.meta.env.VITE_YOUR_VARIABLE_NAME
+
+# TMDB api key
+VITE_TMDB_ACCESS_TOKEN=my_token_declaration_is_here
+*in the env file*
 
 
 # other stuffs added to the vite projects automatically below
