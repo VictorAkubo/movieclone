@@ -1,23 +1,39 @@
 # React + TypeScript + Vite
 
+# React + TypeScript + Vite
+# Create a new project
+# run
+npm create vite@latest
+
+# configure tailwind 
+npm install tailwindcss @tailwindcss/vite
+@tailwindcss/vite for type safety and checking
+
+# other dependencies for fetching, state management and routing
+
+# axios react-router tanstack-query
+# run
+npm install @tanstack/react-query axios react-router-dom 
+
+# for icons i used lucide react
+npm i lucide-react
+
+# start project
+npm run dev
+
+# tmdb configuration
+Create an account on *https://www.themoviedb.org/*
+click on profile
+click on settings to get your api key
+you would be request to enter some inputs like your website name, use http://localhost:3000 if website not deployed i used *http://localhost:5173/* since am using vite
+get your api key and access token
+paste into your .env
+
+# accessing .env for vite use:
+import.meta.env.YOUR_VARIABLE_NAME
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# other stuffs added to the vite projects automatically below
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
