@@ -1,42 +1,53 @@
-# React + TypeScript + Vite
-# Create a new project
-# run
-npm create vite@latest
+# Movie Clone
 
-# configure tailwind
-*installation* 
-npm install tailwindcss @tailwindcss/vite
-@tailwindcss/vite for type safety and checking
+A simple movie clone application built with React, TypeScript, and Vite. It connects to the TMDB API to pull live movie data.
 
-*configure : delete all css and paste->*
-@import "tailwindcss";
+## Tech Stack
+* React & TypeScript (Vite)
+* Tailwind CSS
+* TanStack Query (React Query)
+* Axios
+* React Router DOM
+* Lucide React
 
-# other dependencies for fetching, state management and routing
+---
 
-# axios react-router tanstack-query
-# run
-npm install @tanstack/react-query axios react-router-dom 
+## Setup Instructions
 
-# for icons i used lucide react
-npm i lucide-react
+### 1. Install Dependencies
+Clone the repo, open your terminal in the project folder, and run:
+```bash
+git clone https://github.com/VictorAkubo/movieclone
+cd movieclone
+npm install
+```
 
-# start project
+### 2. Add Your TMDB Token
+Create a `.env` file in the main project folder. 
+
+Grab an Access Token from your TMDB account settings, and drop it in like this:
+
+```env
+VITE_TMDB_ACCESS_TOKEN=put_your_token_you got from_tmdb_here
+```
+
+### 3. Run the App
+To spin up the local server, run:
+```bash
 npm run dev
+```
+Head over to `http://localhost:5173/` in your browser to check it out.
 
-# tmdb configuration
+
+# TMDB configuration
 Create an account on *https://www.themoviedb.org/*
 click on profile
-click on settings to get your api key
-you would be request to enter some inputs like your website name, use http://localhost:3000 if website not deployed i used *http://localhost:5173/* since am using vite
+click on settings
+click on API to get your api key
+you would be requested to enter some inputs like your website name,use *http://localhost:5173/* since i used vite
 get your api key and access token
 paste into your .env
 
-# accessing .env for vite use:
-import.meta.env.VITE_YOUR_VARIABLE_NAME
-
-# TMDB api key
-VITE_TMDB_ACCESS_TOKEN=my_token_declaration_is_here
-*in the env file*
 
 
 # other stuffs added to the vite projects automatically below
