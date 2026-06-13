@@ -28,11 +28,12 @@ export const fetchSearchResults = async (query: string): Promise<Movie[]> => {
   const { data } = await tmdbApi.get(
     `/search/movie?query=${encodeURIComponent(query)}&language=en-US&page=1`,
   );
-  return data.results.slice(0, 6);
+  return data.results;
 };
 
 export const fetchMovieDetails = async (id: string): Promise<MovieDetails> => {
   const { data } = await tmdbApi.get(`/movie/${id}?language=en-US`);
+  console.log(data);
   return data;
 };
 

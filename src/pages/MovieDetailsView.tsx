@@ -13,11 +13,7 @@ export default function MovieDetailsView() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  const {
-    data: movie,
-    isLoading: loadingMovie,
-    error,
-  } = useQuery<MovieDetails>({
+  const {data: movie,isLoading: loadingMovie,error,} = useQuery<MovieDetails>({
     queryKey: ["movieDetails", id],
     queryFn: () => fetchMovieDetails(id!),
     enabled: !!id,
@@ -80,19 +76,20 @@ export default function MovieDetailsView() {
                 </span>
               </div>
             </div>
-
-            <button className="flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded-xl text-xs font-bold hover:bg-blue-700 transition-all shadow-sm">
-              <Heart className="w-3.5 h-3.5 fill-current" /> Add to Favorites
-            </button>
           </div>
 
-          <div className="flex items-center gap-2 mb-8">
-            <div className="bg-amber-50 border border-amber-100 rounded-lg px-2 py-1 flex items-center gap-1.5 text-xs font-extrabold text-amber-600">
-              ★ {movie.vote_average?.toFixed(1)}
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <div className="bg-amber-50 border border-amber-100 rounded-lg px-2 py-1 flex items-center gap-1.5 text-xs font-extrabold text-amber-600">
+                ★ {movie.vote_average?.toFixed(1)}
+              </div>
+              <span className="text-xs font-medium text-slate-400">
+                ({movie.vote_count} votes)
+              </span>
             </div>
-            <span className="text-xs font-medium text-slate-400">
-              ({movie.vote_count} votes)
-            </span>
+            <button className="flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-xl text-xs font-bold hover:bg-blue-700 transition-all shadow-sm">
+              <Heart className="w-3.5 h-3.5 fill-current" /> Add to Favorites
+            </button>
           </div>
 
           <div className="mb-8">
