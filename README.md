@@ -1,13 +1,15 @@
 # React + TypeScript + Vite
-
-# React + TypeScript + Vite
 # Create a new project
 # run
 npm create vite@latest
 
-# configure tailwind 
+# configure tailwind
+*installation* 
 npm install tailwindcss @tailwindcss/vite
 @tailwindcss/vite for type safety and checking
+
+*configure : delete all css and paste->*
+@import "tailwindcss";
 
 # other dependencies for fetching, state management and routing
 
